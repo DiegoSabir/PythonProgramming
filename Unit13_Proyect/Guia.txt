@@ -1,0 +1,5 @@
+Abrir PowerShell
+Dirigirse a GitHub\PythonProgramming\Unit13_Proyect\catalogo_peliculas
+Ejecutar env\Scripts\activate
+Nose pero: pip install autopep8
+Ejecutar python catalogo_peliculas.py
