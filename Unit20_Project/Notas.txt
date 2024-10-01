@@ -1,0 +1,159 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. Todos los derechos reservados.
+
+Prueba la nueva tecnología PowerShell multiplataforma https://aka.ms/pscore6
+
+PS C:\Users\desarrollo> cd Documents
+PS C:\Users\desarrollo\Documents> cd GitHub
+PS C:\Users\desarrollo\Documents\GitHub> dir
+
+
+    Directorio: C:\Users\desarrollo\Documents\GitHub
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        01/10/2024      8:43                PythonProgramming
+
+
+PS C:\Users\desarrollo\Documents\GitHub> cd PythonProgramming
+PS C:\Users\desarrollo\Documents\GitHub\PythonProgramming> dir
+
+
+    Directorio: C:\Users\desarrollo\Documents\GitHub\PythonProgramming
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        27/09/2024      9:04                Unit10_POO
+d-----        27/09/2024     12:10                Unit11_Modularization
+d-----        27/09/2024     12:01                Unit12_Exceptions
+d-----        27/09/2024     14:57                Unit13_Proyect
+d-----        30/09/2024      8:31                Unit14_HTML
+d-----        30/09/2024     11:47                Unit15_CSS
+d-----        01/10/2024      8:32                Unit16_Project_HTML_CSS
+d-----        01/10/2024      8:53                Unit17_Flask_Introduction
+d-----        27/09/2024      8:23                Unit3_Variables_and_Environments
+d-----        27/09/2024      8:23                Unit4_Logical_and_Conditional_Operators
+d-----        27/09/2024      8:23                Unit5_Strings
+d-----        27/09/2024      8:23                Unit6_Lists_and_Tuples
+d-----        27/09/2024      8:23                Unit7_Loops
+d-----        27/09/2024      8:23                Unit8_Dictionaries
+d-----        27/09/2024      8:23                Unit9_Functions
+
+
+PS C:\Users\desarrollo\Documents\GitHub\PythonProgramming> mkdir Unit20_Project
+
+
+    Directorio: C:\Users\desarrollo\Documents\GitHub\PythonProgramming
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        01/10/2024     11:41                Unit20_Project
+
+
+PS C:\Users\desarrollo\Documents\GitHub\PythonProgramming> cd Unit20_Project
+PS C:\Users\desarrollo\Documents\GitHub\PythonProgramming\Unit20_Project> mkdir todo-list
+
+
+    Directorio: C:\Users\desarrollo\Documents\GitHub\PythonProgramming\Unit20_Project
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        01/10/2024     11:41                todo-list
+
+
+PS C:\Users\desarrollo\Documents\GitHub\PythonProgramming\Unit20_Project> cd todo-list
+PS C:\Users\desarrollo\Documents\GitHub\PythonProgramming\Unit20_Project\todo-list> python -m venv env-todo
+PS C:\Users\desarrollo\Documents\GitHub\PythonProgramming\Unit20_Project\todo-list> .\env-todo\Scripts\activate
+(env-todo) PS C:\Users\desarrollo\Documents\GitHub\PythonProgramming\Unit20_Project\todo-list> pip list
+Package Version
+------- -------
+pip     24.2
+(env-todo) PS C:\Users\desarrollo\Documents\GitHub\PythonProgramming\Unit20_Project\todo-list> code .
+(env-todo) PS C:\Users\desarrollo\Documents\GitHub\PythonProgramming\Unit20_Project\todo-list> pip install flask
+Collecting flask
+  Using cached flask-3.0.3-py3-none-any.whl.metadata (3.2 kB)
+Collecting Werkzeug>=3.0.0 (from flask)
+  Using cached werkzeug-3.0.4-py3-none-any.whl.metadata (3.7 kB)
+Collecting Jinja2>=3.1.2 (from flask)
+  Using cached jinja2-3.1.4-py3-none-any.whl.metadata (2.6 kB)
+Collecting itsdangerous>=2.1.2 (from flask)
+  Using cached itsdangerous-2.2.0-py3-none-any.whl.metadata (1.9 kB)
+Collecting click>=8.1.3 (from flask)
+  Using cached click-8.1.7-py3-none-any.whl.metadata (3.0 kB)
+Collecting blinker>=1.6.2 (from flask)
+  Using cached blinker-1.8.2-py3-none-any.whl.metadata (1.6 kB)
+Collecting colorama (from click>=8.1.3->flask)
+  Using cached colorama-0.4.6-py2.py3-none-any.whl.metadata (17 kB)
+Collecting MarkupSafe>=2.0 (from Jinja2>=3.1.2->flask)
+  Using cached MarkupSafe-2.1.5-cp312-cp312-win_amd64.whl.metadata (3.1 kB)
+Using cached flask-3.0.3-py3-none-any.whl (101 kB)
+Using cached blinker-1.8.2-py3-none-any.whl (9.5 kB)
+Using cached click-8.1.7-py3-none-any.whl (97 kB)
+Using cached itsdangerous-2.2.0-py3-none-any.whl (16 kB)
+Using cached jinja2-3.1.4-py3-none-any.whl (133 kB)
+Using cached werkzeug-3.0.4-py3-none-any.whl (227 kB)
+Using cached MarkupSafe-2.1.5-cp312-cp312-win_amd64.whl (17 kB)
+Using cached colorama-0.4.6-py2.py3-none-any.whl (25 kB)
+Installing collected packages: MarkupSafe, itsdangerous, colorama, blinker, Werkzeug, Jinja2, click, flask
+Successfully installed Jinja2-3.1.4 MarkupSafe-2.1.5 Werkzeug-3.0.4 blinker-1.8.2 click-8.1.7 colorama-0.4.6 flask-3.0.3 itsdangerous-2.2.0
+(env-todo) PS C:\Users\desarrollo\Documents\GitHub\PythonProgramming\Unit20_Project\todo-list> flask --app todor --debug run
+Usage: flask run [OPTIONS]
+Try 'flask run --help' for help.
+
+Error: Failed to find Flask application or factory in module 'todor'. Use 'todor:name' to specify one.
+(env-todo) PS C:\Users\desarrollo\Documents\GitHub\PythonProgramming\Unit20_Project\todo-list> flask --app todor --debug run
+ * Serving Flask app 'todor'
+ * Debug mode: on
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:5000
+Press CTRL+C to quit
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 120-201-479
+(env-todo) PS C:\Users\desarrollo\Documents\GitHub\PythonProgramming\Unit20_Project\todo-list> ls
+
+
+    Directorio: C:\Users\desarrollo\Documents\GitHub\PythonProgramming\Unit20_Project\todo-list
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        01/10/2024     11:42                env-todo
+d-----        01/10/2024     12:09                todor
+-a----        01/10/2024     11:48              0 requirements.txt
+-a----        01/10/2024     12:21             97 run.py
+
+
+(env-todo) PS C:\Users\desarrollo\Documents\GitHub\PythonProgramming\Unit20_Project\todo-list> .\run.py
+(env-todo) PS C:\Users\desarrollo\Documents\GitHub\PythonProgramming\Unit20_Project\todo-list> .\run.py
+(env-todo) PS C:\Users\desarrollo\Documents\GitHub\PythonProgramming\Unit20_Project\todo-list> ^C
+(env-todo) PS C:\Users\desarrollo\Documents\GitHub\PythonProgramming\Unit20_Project\todo-list> flask --app todor --debug run
+ * Serving Flask app 'todor'
+ * Debug mode: on
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:5000
+Press CTRL+C to quit
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 120-201-479
+127.0.0.1 - - [01/Oct/2024 12:39:24] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [01/Oct/2024 12:39:24] "GET /favicon.ico HTTP/1.1" 404 -
+127.0.0.1 - - [01/Oct/2024 12:39:47] "GET /todo/list HTTP/1.1" 200 -
+ * Detected change in 'C:\\Users\\desarrollo\\Documents\\GitHub\\PythonProgramming\\Unit20_Project\\todo-list\\todor\\todo.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 120-201-479
+127.0.0.1 - - [01/Oct/2024 13:51:44] "GET /todo/list HTTP/1.1" 200 -
+127.0.0.1 - - [01/Oct/2024 13:51:44] "GET /todo/list HTTP/1.1" 200 -
+127.0.0.1 - - [01/Oct/2024 13:51:45] "GET /todo/list HTTP/1.1" 200 -
+127.0.0.1 - - [01/Oct/2024 13:51:58] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [01/Oct/2024 13:52:59] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [01/Oct/2024 13:54:31] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [01/Oct/2024 13:57:56] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [01/Oct/2024 14:31:53] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [01/Oct/2024 14:33:40] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [01/Oct/2024 14:39:02] "GET / HTTP/1.1" 200 -
