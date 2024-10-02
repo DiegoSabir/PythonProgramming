@@ -1,7 +1,7 @@
 from todor import db
 
 class User(db.Model):
-    id = db.Column(db Integer, primary_key=True)
+    id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(20), unique=True, nullable=False)
     password = db.Column(db.Text, nullable=False)
 
@@ -14,7 +14,7 @@ class User(db.Model):
 
 
 class Todo(db.Model):
-    id = db.Column(db Integer, primary_key=True)
+    id = db.Column(db.Integer, primary_key=True)
     crated_by = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
     title = db.Column(db.String(100), nullable=False)
     desc = db.Column(db.Text)
