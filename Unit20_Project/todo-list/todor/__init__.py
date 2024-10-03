@@ -8,8 +8,8 @@ def create_app():
 
     #Configuracion del proyecto 
     app.config.from_mapping(
-        DEBUG = True, 
-        SECRET_KEY = 'dev',
+        DEBUG = False, 
+        SECRET_KEY = 'devtod',
         SQLALCHEMY_DATABASE_URI = "sqlite:///project.db")
 
     db.init_app(app)

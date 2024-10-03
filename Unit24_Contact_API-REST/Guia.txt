@@ -1,0 +1,6 @@
+python -m venv env-api
+pip install flask
+pip install flask-sqlalchemy
+flask -app app --debug run
+
+Instalar la extension thunder client en visual studio.
